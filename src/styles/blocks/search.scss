@@ -1,0 +1,16 @@
+.search {
+    &__container {
+        display: flex;
+        justify-content: space-around;
+
+        input {
+            margin: 50px;
+            padding: 20px;
+            font-size: 20px;
+            width: 500px;
+            border: none;
+            outline: none;
+            text-align: center;
+        }
+    }
+}

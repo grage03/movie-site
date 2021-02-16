@@ -1,0 +1,45 @@
+$colorNavigation: rgb(194, 194, 194);
+
+.header {
+    background-color: rgb(65, 65, 65);
+    color: $colorNavigation;
+    width: 100%;
+    height: auto;
+    font-weight: bold;
+    font-size: 20px;
+
+    &__container {
+        background-color: rgb(65, 65, 65);
+    }
+
+    .nav {
+        &__inner {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        &__item {
+            padding: 20px 30px;
+            cursor: pointer;
+
+            &:first-child, &:last-child {
+                text-transform: uppercase;
+                color: $colorNavigation;
+
+                &::first-letter {
+                    color: orange;
+                }
+            }
+        }
+
+        &__link {
+            color: $colorNavigation;
+            margin: 0 35px;
+            transition: .1s linear;
+
+            &:hover {
+                color: orange;
+            }
+        }
+    }
+}
