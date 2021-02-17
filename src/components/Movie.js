@@ -12,9 +12,11 @@ function Movie(props) {
         <>
             <div className="movies">
                 <div className="movies__inner">
-                    {img === 'N/A' 
-                        ? <img src="http://placehold.it/350x350"/>
-                        : <img src={img}/>}
+                    {
+                        img === 'N/A' 
+                            ? <img src="http://placehold.it/350x350"/>
+                            : <img src={img}/>
+                    }
                     <div className="movies__information">
                         <h4>{title}</h4>
                         <h4>{year}</h4>

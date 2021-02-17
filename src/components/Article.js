@@ -15,16 +15,12 @@ class Article extends React.Component {
             isFound: true,
 
             currentPage: 1,
-            totalPages: 0,
-
-            statusMovie: false,
-            statusSerial: false
+            totalPages: 0
         }
 
         this.setMovies          = this.setMovies.bind(this);
         this.setTitle           = this.setTitle.bind(this);
         this.setCurrentPage     = this.setCurrentPage.bind(this);
-        this.setStatus          = this.setStatus.bind(this);
     }
 
     componentDidMount() {
@@ -40,10 +36,6 @@ class Article extends React.Component {
                 currentPage: 1,
                 totalPages: Math.floor(+(data.totalResults / 10))
             }));
-    }
-
-    setStatus() {
-
     }
 
     setTitle(value) {
@@ -107,9 +99,7 @@ class Article extends React.Component {
             title,
             isFound,
             totalPages,
-            currentPage,
-            statusMovie,
-            statusSerial
+            currentPage
         } = this.state;
 
         return (
