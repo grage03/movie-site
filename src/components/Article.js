@@ -29,7 +29,7 @@ class Article extends React.Component {
             title 
         } = this.state;
 
-        fetch(`http://www.omdbapi.com/?apikey=68dd085f&page=${currentPage}&s=${title}`)
+        fetch(`http://www.omdbapi.com/?apikey={key}&page=${currentPage}&s=${title}`)
             .then(responce => responce.json())
             .then(data => this.setState({
                 movies: data.Search,
@@ -67,7 +67,7 @@ class Article extends React.Component {
             }
         }
 
-        fetch(`http://www.omdbapi.com/?apikey=68dd085f&page=${currentPage}&s=${title}`)
+        fetch(`http://www.omdbapi.com/?apikey={key}&page=${currentPage}&s=${title}`)
             .then(responce => responce.json())
             .then(data => {
                 this.setState({
@@ -77,7 +77,7 @@ class Article extends React.Component {
     }
 
     setMovies(value) {
-        fetch(`http://www.omdbapi.com/?apikey=68dd085f&s=${value}`)
+        fetch(`http://www.omdbapi.com/?apikey={key}&s=${value}`)
             .then(responce => responce.json())
             .then(data => {
                     typeof(data.Search) === 'undefined' 
